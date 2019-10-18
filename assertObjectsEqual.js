@@ -30,15 +30,19 @@ const eqObjects = function(object1, object2) {
     console.log(`${wrong} ${wrong} ${wrong} Assertion Failed : ${inspect(object1)} !== ${inspect(object2)}`);
   } else {
     for (const key in object1) {
-      if (Array.isArray(object1[key])) {
-        if (!eqArrays(object1[key], object2[key])) {
-          console.log(`${wrong} ${wrong} ${wrong} Assertion Failed : ${inspect(object1)} !== ${inspect(object2)}`);
-          return;
-        }
+      if (typeof object1[key] === 'object' && object1[key] !== null && !Array.isArray(object1[key])) {
+        eqObjects(object1[key], object2[key]);
       } else {
-        if (!assertEqual(object1[key], object2[key])) {
-          console.log(`${wrong} ${wrong} ${wrong} Assertion Failed : ${inspect(object1)} !== ${inspect(object2)}`);
-          return;
+        if (Array.isArray(object1[key])) {
+          if (!eqArrays(object1[key], object2[key])) {
+            console.log(`${wrong} ${wrong} ${wrong} Assertion Failed : ${inspect(object1)} !== ${inspect(object2)}`);
+            return;
+          }
+        } else {
+          if (!assertEqual(object1[key], object2[key])) {
+            console.log(`${wrong} ${wrong} ${wrong} Assertion Failed : ${inspect(object1)} !== ${inspect(object2)}`);
+            return;
+          }
         }
       }
     }
