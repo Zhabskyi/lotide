@@ -1,4 +1,7 @@
-const assertEqual = require('/assertEqual');
+const assertEqual = require('./assertEqual');
+
+const check = String.fromCodePoint(0x2705);
+const wrong = String.fromCodePoint(0x274C)
 
 const assertArraysEqual = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
