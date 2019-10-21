@@ -1,5 +1,4 @@
-const check = String.fromCodePoint(0x2705);
-const wrong = String.fromCodePoint(0x274C);
+const assertEqual = require('/assertEqual');
 
 const assertArraysEqual = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
@@ -16,17 +15,4 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-const assertEqual = function(actual, expected) {
-  if (actual !== expected) {
-    return false;
-  }
-  return true;
-};
-
-
-// TEST CODE
-assertArraysEqual([1, 2, 3], [1, 2, 3]); 
-assertArraysEqual([1, 2, 3, 4, 5], [1, 2, 3, 6, 5]); 
-assertArraysEqual(['a', 2, 3], ['a', 2, 3]); 
-assertArraysEqual([1, 2, 3, 4], [1, 2, 3]); 
-assertArraysEqual(['e', 2, 3], [1, 2, 3]);
+module.exports = assertArraysEqual;
