@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@zhabskyi/lotide",
   "version": "1.0.0",
   "description": "### The Lotide project is a modular collection of functions that operate on data, namely Arrays and Objects. In creating these functions, we will become more comfortable with FOCAL as well as writing modular code and Automated Testing (by writing unit tests).",
   "main": "assertArraysEqual.js",
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/Zhabskyi/lotide.git"
   },
-  "author": "Oleksandr",
+  "author": "Oleksandr Zhabskyi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Zhabskyi/lotide/issues"
