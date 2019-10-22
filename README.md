@@ -63,7 +63,65 @@ flatten([1, 2, [3, 4], 5, [6]]) // => [1, 2, 3, 4, 5, 6]
 
 * `countOnly`
 
-Function should report back how many instances of each string were found in the allItems array of strings.
+Function return an object containing counts of everything that the input object listed.
+
+```js
+const firstNames = [
+  "Karl",
+  "Salima",
+  "Agouhanna",
+  "Fang",
+  "Kavith",
+  "Jason",
+  "Salima",
+  "Fang",
+  "Joe"
+];
+
+const result = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true });
+result = { Fang: 2, Jason: 1 };
+```
+
+* `letterPosition`
+
+Function return all the indices (zero-based positions) in the string where each character is found.
+```js
+letterPositions("lighthouse in the house"); // =>
+{ l: [ 0 ],
+  i: [ 1, 11 ],
+  g: [ 2 ],
+  h: [ 3, 5, 15, 18 ],
+  t: [ 4, 14 ],
+  o: [ 6, 19 ],
+  u: [ 7, 20 ],
+  s: [ 8, 21 ],
+  e: [ 9, 16, 22 ],
+  n: [ 12 ] }
+```
+
+* `findKeyByValue`
+
+Function takes in an object and a value. It should scan the object and return the first key which contains the given value. If no key with that given value is found, then it should return undefined.
+
+```js
+const bestTVShowsByGenre = {
+  sciFi: "The Expanse",
+  comedy: "Brooklyn Nine-Nine",
+  drama:  "The Wire"
+};
+
+findKeyByValue(bestTVShowsByGenre, "The Wire"); // => "drama"
+findKeyByValue(bestTVShowsByGenre, "That '70s Show"); // => undefined
+```
+
+* `eqObjects` 
+
+Function take in two objects and returns true or false, based on a perfect match.
+
+* `countLetters`
+
+Function return an object where each unique character encountered is a property of the object and the value for that property/key should be the number of occurrences for that character.
+
 ```js
 countLetters("lighthouse in the house");
 {
@@ -79,22 +137,6 @@ countLetters("lighthouse in the house");
   n: 1,
 }
 ```
-
-* `letterPosition`
-
-Function return all the indices (zero-based positions) in the string where each character is found.
-
-* `findKeyByValue`
-
-Function takes in an object and a value. It should scan the object and return the first key which contains the given value. If no key with that given value is found, then it should return undefined.
-
-* `eqObjects` 
-
-Function take in two objects and returns true or false, based on a perfect match.
-
-* `countLetters`
-
-Function return an object where each unique character encountered is a property of the object and the value for that property/key should be the number of occurrences for that character.
 
 * `takeUtil`:
 
