@@ -1,6 +1,6 @@
 {
   "name": "@zhabskyi/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "### The Lotide project is a modular collection of functions that operate on data, namely Arrays and Objects. In creating these functions, we will become more comfortable with FOCAL as well as writing modular code and Automated Testing (by writing unit tests).",
   "main": "assertArraysEqual.js",
   "directories": {
